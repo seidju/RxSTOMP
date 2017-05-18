@@ -4,6 +4,9 @@
 [![Swift](https://img.shields.io/badge/language-Swift-blue.svg)](https://swift.org)
 [![iOS](https://img.shields.io/badge/OS-iOS-orange.svg)](https://developer.apple.com/ios/)
 
+![alt_text](https://github.com/seidju/RxSTOMP/blob/master/logo.png)
+
+
 RxSTOMP is a variation of [STOMP](https://stomp.github.io) client, written in Swift3, using RxSwift and CocoaAsyncSocket.
 
 ## Installation
