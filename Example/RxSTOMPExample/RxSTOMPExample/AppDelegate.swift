@@ -7,17 +7,44 @@
 //
 
 import UIKit
-
+import RxSTOMP
+import Swinject
+import SwinjectStoryboard
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    //Init DI container
+    let container = Container() { container in
+        
+        // Models
+        container.register(RxSTOMPStreamProtocol.self) { _ in RxSTOMPStream() }
+        
+        // Views
+        container.storyboardInitCompleted(ExampleViewController.self) {r,c in
+            c.viewModel = r.resolve(ExampleViewModel.self)!
+        }
+        
+        //View models
+        container.register(ExampleViewModel.self) { r
+            in ExampleViewModel(stompStream: r.resolve(RxSTOMPStreamProtocol.self)!)
+        }
+    }
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.backgroundColor = UIColor.white
+        window.makeKeyAndVisible()
+        self.window = window
+        let bundle = Bundle(for: ExampleViewController.self)
+        let storyboard = SwinjectStoryboard.create(name: "Main", bundle: bundle, container: container)
+        window.rootViewController = storyboard.instantiateInitialViewController()
         return true
     }
+
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

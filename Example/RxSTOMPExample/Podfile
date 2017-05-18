@@ -7,4 +7,7 @@ source 'https://github.com/seidju/RxSTOMP.git'
 
 target 'RxSTOMPExample' do
     pod 'RxSTOMP', :path => '~/XCode/RxSTOMP'
+    pod 'RxCocoa'
+	pod 'Swinject', '2.0.0'
+	pod 'SwinjectStoryboard', '1.0.0'
 end

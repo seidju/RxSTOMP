@@ -6,9 +6,9 @@
 //  Copyright © 2017 Pavel Shatalov. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
+import RxSwift
+import RxCocoa
 import RxSTOMP
 
 class ExampleViewController: UIViewController {

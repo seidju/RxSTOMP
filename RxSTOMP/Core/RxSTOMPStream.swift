@@ -54,7 +54,7 @@ public class RxSTOMPStream: NSObject, RxSTOMPStreamProtocol {
 
     
 //MARK: - Initializer
-    override init() {
+    override public init() {
         super.init()
         self.commonInit()
     }

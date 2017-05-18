@@ -9,11 +9,11 @@
 import RxSTOMP
 import RxSwift
 class ExampleViewModel {
-    let stompStream: RxSTOMPStream
+    let stompStream: RxSTOMPStreamProtocol
     fileprivate let disposeBag = DisposeBag()
     fileprivate var login: String?
     fileprivate var passcode: String?
-    init(stompStream: RxSTOMPStream) {
+    init(stompStream: RxSTOMPStreamProtocol) {
         self.stompStream = stompStream
         self.subscribeToState()
         self.subscribeToFrames()

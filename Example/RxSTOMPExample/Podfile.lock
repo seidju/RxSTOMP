@@ -1,12 +1,20 @@
 PODS:
   - CocoaAsyncSocket (7.6.0)
-  - RxSTOMP (0.1.1):
+  - RxCocoa (3.4.0):
+    - RxSwift (~> 3.4)
+  - RxSTOMP (0.1.2):
     - CocoaAsyncSocket
     - RxSwift
   - RxSwift (3.4.0)
+  - Swinject (2.0.0)
+  - SwinjectStoryboard (1.0.0):
+    - Swinject (= 2.0.0)
 
 DEPENDENCIES:
+  - RxCocoa
   - RxSTOMP (from `~/XCode/RxSTOMP`)
+  - Swinject (= 2.0.0)
+  - SwinjectStoryboard (= 1.0.0)
 
 EXTERNAL SOURCES:
   RxSTOMP:
@@ -14,9 +22,12 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: b9d5589f07baf9de8f34cc25abd4fcba28f13805
-  RxSTOMP: 95c47c820362ee358e1a75562fd94b0c93b8f03b
+  RxCocoa: d14ef6b6029e1ddc6e966508c09289090de68ff9
+  RxSTOMP: 8ca3466e00e35b984af43f3a90f05ded450ec0da
   RxSwift: 3789a1af753002a14edecdb698a2424624296a9c
+  Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
+  SwinjectStoryboard: 8e0d3c0202b64172bdf915d55e8dc83d9c4e7863
 
-PODFILE CHECKSUM: 84b9d677ed0888855c682f6791af038c4003b966
+PODFILE CHECKSUM: 96a66671621edf0928909ba995326bb13725ca5d
 
 COCOAPODS: 1.2.0.beta.1

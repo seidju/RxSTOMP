@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RxCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>RxSTOMP.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,15 +29,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Swinject.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwinjectStoryboard.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>22438F7D4C4A6148811C6D7978FE2402</key>
+		<key>337A8399F29EB9005CB7907E7806A864</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44BBDC2F6A61B7CF7EEBB67DD07274E4</key>
+		<key>40C4EE9E15282C4500AC18A95B085C9E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A88EA57AD791FFF77280D046A799661</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8B8DA7F2F1B1EB781C6DDF285E8ECFD5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B97F59C3336A905EC234E8EDACCE8906</key>
+		<key>E82868A0C8CB7B4D9300ADFA1DF50E07</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7DFAE231374D3E442A0D21D43302168</key>
 		<dict>
 			<key>primary</key>
 			<true/>
