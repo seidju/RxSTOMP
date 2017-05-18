@@ -23,7 +23,7 @@ public enum StompState {
 }
 
 //MARK: - Protocol for DI
-protocol RxSTOMPStreamProtocol {
+public protocol RxSTOMPStreamProtocol {
     var inputFrame: Observable<RxSTOMPFrame> { get }
     var state: Observable<StompState> { get }
     func connect()
@@ -65,7 +65,7 @@ public class RxSTOMPStream: NSObject, RxSTOMPStreamProtocol {
 
     
 //MARK: - Basic functions
-    func connect() {
+    public func connect() {
         guard let socket = self.socket else { return }
         self.stateSubject.on(.next(.connecting))
         do {
@@ -76,22 +76,22 @@ public class RxSTOMPStream: NSObject, RxSTOMPStreamProtocol {
         }
     }
     
-    func disconnect() {
+    public func disconnect() {
         let disconnectFrame = RxSTOMPFrame(command: .disconnect, headers: [.receipt(receipId: "foo")])
         self.sendFrame(frame: disconnectFrame)
         self.socket.disconnect()
     }
     
-    func auth(login: String, passcode: String) {
+    public func auth(login: String, passcode: String) {
         let device_id = UIDevice.current.identifierForVendor!.uuidString
         let connectionFrame = RxSTOMPFrame(command: .connect, headers: [.host(host: RxSTOMPConfiguration.Network.host), .acceptVersion(version: "1.2"), .login(login: login), .passcode(passcode: passcode), .device_id(device_id: device_id), .heartBeat(value: "10000,10000"), .receipt(receipId: UUID().uuidString)])
-        sendFrame(frame: connectionFrame)
+        self.sendFrame(frame: connectionFrame)
     }
 }
 
 //MARK: - Utility methods
 extension RxSTOMPStream {
-    func sendFrame(frame: RxSTOMPFrame) {
+    public func sendFrame(frame: RxSTOMPFrame) {
         print("SEND COMMAND: \(frame.description)")
         RxSTOMPConfiguration.Queue.stompQueue.async { [weak self] in
             guard let sSelf = self else { return }

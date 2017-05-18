@@ -1,0 +1,10 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/seidju/RxSTOMP.git'
+
+
+target 'RxSTOMPExample' do
+    pod 'RxSTOMP', :path => '~/XCode/RxSTOMP'
+end

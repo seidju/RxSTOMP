@@ -1,0 +1,6 @@
+framework module RxSTOMP {
+  umbrella header "RxSTOMP-umbrella.h"
+
+  export *
+  module * { export * }
+}

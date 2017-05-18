@@ -1,0 +1,22 @@
+PODS:
+  - CocoaAsyncSocket (7.6.0)
+  - RxSTOMP (0.1.0):
+    - CocoaAsyncSocket
+    - RxSwift
+  - RxSwift (3.4.0)
+
+DEPENDENCIES:
+  - RxSTOMP (from `~/XCode/RxSTOMP`)
+
+EXTERNAL SOURCES:
+  RxSTOMP:
+    :path: ~/XCode/RxSTOMP
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: b9d5589f07baf9de8f34cc25abd4fcba28f13805
+  RxSTOMP: e0c286aa6f2e4fad2ced4780e1f47fbfcb4ac005
+  RxSwift: 3789a1af753002a14edecdb698a2424624296a9c
+
+PODFILE CHECKSUM: 84b9d677ed0888855c682f6791af038c4003b966
+
+COCOAPODS: 1.2.0.beta.1
