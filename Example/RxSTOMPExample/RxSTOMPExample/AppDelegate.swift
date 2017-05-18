@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //Init DI container
     let container = Container() { container in
         
+        RxSTOMPConfiguration.Network.host = "mytextexamplehost.com"
+        RxSTOMPConfiguration.Network.port = 7691
+        
         // Models
         container.register(RxSTOMPStreamProtocol.self) { _ in RxSTOMPStream() }
         
