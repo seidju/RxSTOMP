@@ -1,5 +1,4 @@
 # RxSTOMP
-## Down
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/iwasrobbed/Down/blob/master/LICENSE)
 [![CocoaPods](https://img.shields.io/cocoapods/v/RxSTOMP.svg?maxAge=2592000)]()
 [![Swift](https://img.shields.io/badge/language-Swift-blue.svg)](https://swift.org)
