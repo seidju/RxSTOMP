@@ -5,7 +5,7 @@
   },
   "summary": "Simple implementation of STOMP protocol via CocoaAsyncSocket and RxSwift",
   "requires_arc": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -16,7 +16,7 @@
   "homepage": "https://github.com/seidju/RxSTOMP",
   "source": {
     "git": "https://github.com/seidju/RxSTOMP.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "frameworks": "Foundation",
   "dependencies": {

@@ -10,18 +10,18 @@ import Foundation
 //Simple configuration
 public struct RxSTOMPConfiguration {
     public struct Network {
-        static var host: String = "localhost"
-        static var port: UInt16 = 7891
+        public static var host: String = "localhost"
+        public static var port: UInt16 = 7891
     }
     
     public struct Queue {
-        static let stompQueue = DispatchQueue(label: "stomp")
+        public static let stompQueue = DispatchQueue(label: "stomp")
     }
     
     public struct Timeouts {
-        static let stompWriteStream: TimeInterval = -1
-        static let stompReadStart: TimeInterval = 10
-        static let stompReadStream: TimeInterval = -1
+        public static var stompWriteStream: TimeInterval = -1
+        public static var stompReadStart: TimeInterval = 10
+        public static var stompReadStream: TimeInterval = -1
     }
     
     public struct Tags {
